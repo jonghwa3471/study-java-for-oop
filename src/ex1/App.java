@@ -116,7 +116,7 @@ public class App {
         b = b >= 0 ? b * b : -b * -b;
         System.out.println(b); */
 
-        String str1 = "아! 대한민국";
+/*         String str1 = "아! 대한민국";
         String str2 = "Korea";
         System.out.println(str1 + str2);
         System.out.println("아! 대한민국 \nKorea");
@@ -126,6 +126,253 @@ public class App {
         System.out.println(str1 + (a + b) + "리 금수강산 ");
         System.out.println(a + b + "리 금수강산");
         System.out.println('3' + "천리 금수강산");
-        System.out.println('3' + 2997 + "리 금수강산");
+        System.out.println('3' + 2997 + "리 금수강산"); */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("성적을 입력하세요 : ");
+        int grade = stdin.nextInt();
+        if (grade >= 90)
+                System.out.println("축하합니다");
+                System.out.println("A학점을 취득하셨습니다");
+        System.out.println("감사합니다"); */
+
+        /* Scanner stdin = new Scanner(System.in);
+        System.out.println("성적을 입력하세요 : ");
+        int grade = stdin.nextInt();
+        if (grade >= 90)
+                System.out.println("A학점 취득 성공");
+        else    
+                System.out.println("A학점 취득 실패");
+        System.out.println("감사합니다"); */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("성적을 입력하세요 : ");
+        int grade = stdin.nextInt();
+        if (grade >= 90)
+                System.out.println("A학점 취득");
+        else if (grade >= 80)
+                System.out.println("B학점 취득");
+        else if (grade >= 70)
+                System.out.println("C학점 취득");
+        else if (grade >= 60)
+                System.out.println("D학점 취득");
+        else            
+                System.out.println("학점 취득 실패"); */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("성적을 입력하세요 : ");
+        int score = stdin.nextInt();
+        if (score >= 80) {
+                System.out.println("우수 학점군에 속합니다");
+                if( score >= 90)
+                        System.out.println("A학점입니다");
+                else
+                        System.out.println("B학점입니다");
+        }
+        else {
+                if (score >= 60) {
+                        System.out.println("보통 학점군에 속합니다");
+                        if (score >= 70)
+                                System.out.println("C학점입니다");
+                        else
+                                System.out.println("D학점입니다");
+                }
+                else
+                        System.out.println("학점 취득 실패");
+        } */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("월을 입력하세요 : ");
+        int month = stdin.nextInt();
+        String MtoS;
+        switch (month){
+                case 12:
+                case 1:
+                case 2:
+                        MtoS = "겨울입니다.";
+                        break;
+                case 3:
+                case 4:
+                case 5:
+                        MtoS = "봄입니다.";
+                        break;
+                case 6:
+                case 7:
+                case 8:
+                        MtoS = "여름입니다.";
+                        break;
+                case 9:
+                        System.out.println("멋진 9월과 ");
+                case 10:
+                        System.out.println("아름다운 10월과 ");
+                case 11:
+                        System.out.println("낙엽의 11월은 ");
+                        MtoS = "가을입니다.";
+                        break;
+                default:
+                        MtoS = "1~12월을 벗어난 달입니다.";
+                        break;
+        }
+        System.out.println(MtoS); */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("월을 입력하세요(영문자) : ");
+        String month = stdin.next();
+        String MtoS;
+        switch (month) {
+                case "December":
+                case "January":
+                case "February":
+                        MtoS = "겨울입니다.";
+                        break;
+                case "March":
+                case "April":
+                case "May":
+                        MtoS = "봄입니다.";
+                        break;
+                case "June":
+                case "July":
+                case "August":
+                        MtoS = "여름입니다.";
+                        break;
+                case "September":
+                        System.out.println("멋진 9월과 ");
+                case "October":
+                        System.out.println("아름다운 10월과 ");
+                case "November":
+                        System.out.println("낙엽의 11월은 ");
+                        MtoS = "가을입니다.";
+                        break;
+                default:
+                        MtoS = "1~12월을 벗어난 달입니다.";
+                        break;
+        }
+        System.out.println(MtoS); */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("원하는 단을 입력하세요 : ");
+        int dan = stdin.nextInt();
+        int x = 1;
+        while (x <= 9) {
+                System.out.println(dan + "*" + x + "=" + dan * x);
+                x++;
+        } */
+
+/*         int hap = 0, count = 1;
+        do {
+                hap = hap + count;
+                count = count + 1;
+        } while (count <= 10);
+        System.out.println("1부터 10까지의 합은 "+ hap + " 입니다"); */
+
+/*         int choice;
+        Scanner stdin = new Scanner(System.in);
+        do {
+                System.out.println("=== 반복문 종류 설명 ===");
+                System.out.println(" 1. while 반복문");
+                System.out.println(" 2. do-while 반복문");
+                System.out.println(" 3. for 반복문");
+                System.out.println("끝내시려면 99를 입력하세요");
+                System.out.println("원하는 번호를 입력하세요 : ");
+                choice = stdin.nextInt();
+                switch(choice) {
+                        case 1:
+                                System.out.println("****while 반복문****");
+                                System.out.println("조건을 먼저 검사하고 조건이 참일 경우 반복 부분을 수행하는 반복문");
+                                break;
+                        case 2:
+                                System.out.println("****do-while 반복문****");
+                                System.out.println("반복 부분을 먼저 수행하고 조건을 검사한다. 최소한 한 번은 수행되는 반복문");
+                                break;
+                        case 3:
+                                System.out.println("****for 반복문****");
+                                System.out.println("지정된 횟수만큼 반복 부분을 수행하는 반복문");
+                                break;
+                        case 99:
+                                System.out.println("사용해 주셔서 감사합니다.");
+                                break;
+                        default:
+                                System.out.println("숫자를 잘못 입력하셨습니다.");
+                }
+                System.out.println();
+        } while (choice != 99); */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("두 개의 숫자를 입력하세요(공백으로 구분) : ");
+        int m = stdin.nextInt();
+        int n = stdin.nextInt();
+        int i;
+        for (i = 1; i <= m * n; i++) {
+                if ((i % n == 0) && (i % m == 0))
+                        break;
+        }
+        System.out.println("최소 공배수는 " + i + "입니다.");
+        for (i = n; i >= 1; i--) {
+                if((m % i == 0) && (n % i == 0))
+                        break;
+        }
+        if (i == 1)
+                System.out.println("최대 공약수가 없습니다.");
+        else   
+                System.out.println("최대 공약수는 " + i + "입니다."); */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("원하는 숫자를 입력하세요 : ");
+        int num = stdin.nextInt();
+        int i = 1;
+        while (i <= num) {
+                int j = 1;
+                while (j <= i) {
+                        System.out.println("*");
+                        j++;
+                }
+                System.out.println();
+                i++;
+        } */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("합계를 원하는 정수 입력 : ");
+        int num = stdin.nextInt();
+        int sum = 0, i = 1;
+        while (true) {
+                sum = sum + i;
+                if (i == num) break;
+                i++;
+        }
+        System.out.println(num + "까지의 합계는 = " + sum); */
+
+/*         int i = 2, j;
+        Loop : while (true) {
+                j = 1;
+                if (i < 10)
+                        System.out.println("\n=== " + i + "단 ===");
+                Innerloop : while (true) {
+                        if (j > 9) break;
+                        if (i > 9) break Loop;
+                        System.out.println(i + "*" + j + "=" + i * j);
+                        j++;
+                }
+                System.out.println();
+                i++;
+        } */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("원하는 정수 입력(짝수의 합) : ");
+        int num = stdin.nextInt();
+        int i, sum = 0;
+        for (i = 1; i <= num; i++) {
+                if (i % 2 == 1) continue;
+                sum = sum + i;
+        }
+        System.out.println("1부터 " + num + "까지 짝수의 합 = " + sum); */
+
+        int i, j;
+        Outer : for (i = 2; i <= 9; i = i + 1) {
+                System.out.println("===" + i + "단===");
+                for (j = 1; j <= 9; j = j + 1) {
+                        if (j == 3) continue Outer;
+                        System.out.println(i + "*" + j + "=" + i * j);
+                }
+        }
     }
 }
