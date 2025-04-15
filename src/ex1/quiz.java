@@ -1,9 +1,8 @@
 package ex1;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class quiz {
+public class Quiz {
     public void printSomething() {
         // Q1
         Scanner stdin = new Scanner(System.in);
@@ -68,3 +67,7 @@ public class quiz {
         System.out.println("총 사과 가격: " + totalPrice);
     }
 }
+
+
+
+

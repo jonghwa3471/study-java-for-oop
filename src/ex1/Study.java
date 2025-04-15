@@ -1,0 +1,574 @@
+package ex1;
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Study {
+    public void examples() {
+    /*         int u_price = -300;
+        int count = 9;
+
+        System.out.printf("%d원짜리 %d개를 사면 %d입니다\n", 300, 9, 300 * 9);
+        System.out.printf("%10d원짜리 %+10d개를 사면 %10d입니다\n", u_price, count, u_price * count);
+        System.out.printf("10진수 15를 16진수로 출력하면 : %x, 8진수로 출력하면 : %o\n", 15, 15);
+        System.out.printf("음수값 -10을 %%d로 출력하면 %d\n", -10); */
+
+/*         double r = 5.0;
+        double pi = 3.14159;
+
+        System.out.printf("반지름이 %f인 원의 넓이는 %f입니다\n", 5.0, 3.14159*5*5);
+        System.out.printf("반지름이 %f인 원의 넓이는 %f입니다\n", r, pi*r*r);
+        System.out.printf("반지름이 %e인 원의 넓이는 %e입니다\n", r, pi*r*r);
+
+        System.out.printf("123.456을 %%f로 : %f\n", 123.456);
+        System.out.printf("123.456을 %%e로 : %e\n", 123.456);
+        System.out.printf("-123.456을 %%E로 : %E\n", -123.456); */
+
+/*         char ch1 = 'A';
+        String name = "홍길동";
+
+        System.out.printf("%c\n", 'A');
+        System.out.printf("%s\n", "AB");
+        System.out.printf("%s\n", "AB CCCCC");
+        System.out.printf("%s씨 %s\n%s\n", name, "재미있는 자바언어", "열심히 하세요"); */
+
+/*         byte b = 120;
+        int i = b;
+        System.out.println("확대 형 변환 : "+i);
+        int j = 259;
+        double d = 259.428;
+        System.out.println("축소 형 변환 결과");
+        b = (byte) j;
+        System.out.println("int 259를 byte로 : " + b);
+        i = (int) d;
+        System.out.println("double 259.428을 int로 : " + i);
+        b = (byte) d;
+        System.out.println("double 259.428을 byte로 : " + b); */
+
+/*         int a = 5, b = 2;
+
+        int sum = a + b;
+        System.out.println("a + b =" + sum);
+
+        int sub = a - b;
+        System.out.println("a - b =" + sub);
+
+        int mul = a * b;
+        System.out.println("a * b =" + mul);
+
+        int div = a / b;
+        System.out.println("a / b =" + div);
+
+        int mod = a % b;
+        System.out.println("a % b =" + mod);
+
+        int c = ++a;
+        System.out.println("a의 전위 증가 연산(prefix)="+c);
+        System.out.println("a 변수의 값 : "+a);
+
+        int d = b++;
+        System.out.println("b의 후위 증가 연산(postfix)=" +d);
+        System.out.println("b 변수의 값 : "+b); */
+
+/*         boolean a;
+        a = (20 > 10) || (30 > 40);
+        System.out.println("20이 10보다 크거나 또는(논리합 ||) 30이 40보다 큰가? " +a);
+        
+        a = (20 > 10) && (30 > 40);
+        System.out.println("20이 10보다 크고 그리고(논리곱 &&) 30이 40보다 큰가? " +a);
+
+        a = ! true;
+        System.out.println("true의 !(not)은? " + a);
+        System.out.println("20이 10보다 크거나 또는(논리합 ||) 30이 40보다 큰가? " + ((20 > 10) || (30 > 40)));
+        System.out.println("20이 10보다 크고 그리고(논리곱 &&) 30이 40보다 큰가? " + ((20 > 10) && (30 > 40)));
+        System.out.println("true의 !(not)은? " + (! true)); */
+
+/*         int a = 14;
+        int b = 11;
+        System.out.println("a = "+a+"("+Integer.toBinaryString(a)+")");
+        System.out.println("b = "+b+"("+Integer.toBinaryString(b)+")");
+        System.out.println("a&b = "+(a&b)+"("+Integer.toBinaryString(a&b)+")");
+        System.out.println("a|b = "+(a|b)+"("+Integer.toBinaryString(a|b)+")");
+        System.out.println("a^b = "+(a^b)+"("+Integer.toBinaryString(a^b)+")");
+        System.out.println("~b = "+(~b)+"("+Integer.toBinaryString(~b)+")"); */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.print("두 개의 숫자를 입력 : ");
+
+        int a = stdin.nextInt();
+        int b = stdin.nextInt();
+
+        System.out.println("a = " +a+"("+Integer.toBinaryString(a)+")");
+        System.out.println("b = " +b+"("+Integer.toBinaryString(b)+")");
+        System.out.println("a<<2 = " +(a<<2)+"("+Integer.toBinaryString(a<<2)+")");
+        System.out.println("a>>2 = " +(a>>2)+"("+Integer.toBinaryString(a>>2)+")");
+        System.out.println("b<<2 = " +(b<<2)+"("+Integer.toBinaryString(b<<2)+")");
+        System.out.println("b>>2 = " +(b>>2)+"("+Integer.toBinaryString(b>>2)+")");
+        System.out.println("b>>>2 = " +(b>>>2)+"("+Integer.toBinaryString(b>>>2)+")"); */
+
+/*         boolean flag;
+        int a = 11;
+        flag = a >= 10 ? true : false;
+        System.out.println(flag);
+
+        int count = 10;
+        System.out.println(count != 10 ? "10이 아님" : "10을 가짐");
+
+        int b = -10;
+        b = b >= 0 ? b * b : -b * -b;
+        System.out.println(b); */
+
+/*         String str1 = "아! 대한민국";
+        String str2 = "Korea";
+        System.out.println(str1 + str2);
+        System.out.println("아! 대한민국 \nKorea");
+        int a = 1000;
+        int b = 2000;
+        System.out.println(str1 + a + b + "리 금수강산 ");
+        System.out.println(str1 + (a + b) + "리 금수강산 ");
+        System.out.println(a + b + "리 금수강산");
+        System.out.println('3' + "천리 금수강산");
+        System.out.println('3' + 2997 + "리 금수강산"); */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("성적을 입력하세요 : ");
+        int grade = stdin.nextInt();
+        if (grade >= 90)
+                System.out.println("축하합니다");
+                System.out.println("A학점을 취득하셨습니다");
+        System.out.println("감사합니다"); */
+
+        /* Scanner stdin = new Scanner(System.in);
+        System.out.println("성적을 입력하세요 : ");
+        int grade = stdin.nextInt();
+        if (grade >= 90)
+                System.out.println("A학점 취득 성공");
+        else    
+                System.out.println("A학점 취득 실패");
+        System.out.println("감사합니다"); */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("성적을 입력하세요 : ");
+        int grade = stdin.nextInt();
+        if (grade >= 90)
+                System.out.println("A학점 취득");
+        else if (grade >= 80)
+                System.out.println("B학점 취득");
+        else if (grade >= 70)
+                System.out.println("C학점 취득");
+        else if (grade >= 60)
+                System.out.println("D학점 취득");
+        else            
+                System.out.println("학점 취득 실패"); */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("성적을 입력하세요 : ");
+        int score = stdin.nextInt();
+        if (score >= 80) {
+                System.out.println("우수 학점군에 속합니다");
+                if( score >= 90)
+                        System.out.println("A학점입니다");
+                else
+                        System.out.println("B학점입니다");
+        }
+        else {
+                if (score >= 60) {
+                        System.out.println("보통 학점군에 속합니다");
+                        if (score >= 70)
+                                System.out.println("C학점입니다");
+                        else
+                                System.out.println("D학점입니다");
+                }
+                else
+                        System.out.println("학점 취득 실패");
+        } */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("월을 입력하세요 : ");
+        int month = stdin.nextInt();
+        String MtoS;
+        switch (month){
+                case 12:
+                case 1:
+                case 2:
+                        MtoS = "겨울입니다.";
+                        break;
+                case 3:
+                case 4:
+                case 5:
+                        MtoS = "봄입니다.";
+                        break;
+                case 6:
+                case 7:
+                case 8:
+                        MtoS = "여름입니다.";
+                        break;
+                case 9:
+                        System.out.println("멋진 9월과 ");
+                case 10:
+                        System.out.println("아름다운 10월과 ");
+                case 11:
+                        System.out.println("낙엽의 11월은 ");
+                        MtoS = "가을입니다.";
+                        break;
+                default:
+                        MtoS = "1~12월을 벗어난 달입니다.";
+                        break;
+        }
+        System.out.println(MtoS); */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("월을 입력하세요(영문자) : ");
+        String month = stdin.next();
+        String MtoS;
+        switch (month) {
+                case "December":
+                case "January":
+                case "February":
+                        MtoS = "겨울입니다.";
+                        break;
+                case "March":
+                case "April":
+                case "May":
+                        MtoS = "봄입니다.";
+                        break;
+                case "June":
+                case "July":
+                case "August":
+                        MtoS = "여름입니다.";
+                        break;
+                case "September":
+                        System.out.println("멋진 9월과 ");
+                case "October":
+                        System.out.println("아름다운 10월과 ");
+                case "November":
+                        System.out.println("낙엽의 11월은 ");
+                        MtoS = "가을입니다.";
+                        break;
+                default:
+                        MtoS = "1~12월을 벗어난 달입니다.";
+                        break;
+        }
+        System.out.println(MtoS); */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("원하는 단을 입력하세요 : ");
+        int dan = stdin.nextInt();
+        int x = 1;
+        while (x <= 9) {
+                System.out.println(dan + "*" + x + "=" + dan * x);
+                x++;
+        } */
+
+/*         int hap = 0, count = 1;
+        do {
+                hap = hap + count;
+                count = count + 1;
+        } while (count <= 10);
+        System.out.println("1부터 10까지의 합은 "+ hap + " 입니다"); */
+
+/*         int choice;
+        Scanner stdin = new Scanner(System.in);
+        do {
+                System.out.println("=== 반복문 종류 설명 ===");
+                System.out.println(" 1. while 반복문");
+                System.out.println(" 2. do-while 반복문");
+                System.out.println(" 3. for 반복문");
+                System.out.println("끝내시려면 99를 입력하세요");
+                System.out.println("원하는 번호를 입력하세요 : ");
+                choice = stdin.nextInt();
+                switch(choice) {
+                        case 1:
+                                System.out.println("****while 반복문****");
+                                System.out.println("조건을 먼저 검사하고 조건이 참일 경우 반복 부분을 수행하는 반복문");
+                                break;
+                        case 2:
+                                System.out.println("****do-while 반복문****");
+                                System.out.println("반복 부분을 먼저 수행하고 조건을 검사한다. 최소한 한 번은 수행되는 반복문");
+                                break;
+                        case 3:
+                                System.out.println("****for 반복문****");
+                                System.out.println("지정된 횟수만큼 반복 부분을 수행하는 반복문");
+                                break;
+                        case 99:
+                                System.out.println("사용해 주셔서 감사합니다.");
+                                break;
+                        default:
+                                System.out.println("숫자를 잘못 입력하셨습니다.");
+                }
+                System.out.println();
+        } while (choice != 99); */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("두 개의 숫자를 입력하세요(공백으로 구분) : ");
+        int m = stdin.nextInt();
+        int n = stdin.nextInt();
+        int i;
+        for (i = 1; i <= m * n; i++) {
+                if ((i % n == 0) && (i % m == 0))
+                        break;
+        }
+        System.out.println("최소 공배수는 " + i + "입니다.");
+        for (i = n; i >= 1; i--) {
+                if((m % i == 0) && (n % i == 0))
+                        break;
+        }
+        if (i == 1)
+                System.out.println("최대 공약수가 없습니다.");
+        else   
+                System.out.println("최대 공약수는 " + i + "입니다."); */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("원하는 숫자를 입력하세요 : ");
+        int num = stdin.nextInt();
+        int i = 1;
+        while (i <= num) {
+                int j = 1;
+                while (j <= i) {
+                        System.out.println("*");
+                        j++;
+                }
+                System.out.println();
+                i++;
+        } */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("합계를 원하는 정수 입력 : ");
+        int num = stdin.nextInt();
+        int sum = 0, i = 1;
+        while (true) {
+                sum = sum + i;
+                if (i == num) break;
+                i++;
+        }
+        System.out.println(num + "까지의 합계는 = " + sum); */
+
+/*         int i = 2, j;
+        Loop : while (true) {
+                j = 1;
+                if (i < 10)
+                        System.out.println("\n=== " + i + "단 ===");
+                Innerloop : while (true) {
+                        if (j > 9) break;
+                        if (i > 9) break Loop;
+                        System.out.println(i + "*" + j + "=" + i * j);
+                        j++;
+                }
+                System.out.println();
+                i++;
+        } */
+
+/*         Scanner stdin = new Scanner(System.in);
+        System.out.println("원하는 정수 입력(짝수의 합) : ");
+        int num = stdin.nextInt();
+        int i, sum = 0;
+        for (i = 1; i <= num; i++) {
+                if (i % 2 == 1) continue;
+                sum = sum + i;
+        }
+        System.out.println("1부터 " + num + "까지 짝수의 합 = " + sum); */
+
+/*         int i, j;
+        Outer : for (i = 2; i <= 9; i = i + 1) {
+                System.out.println("===" + i + "단===");
+                for (j = 1; j <= 9; j = j + 1) {
+                        if (j == 3) continue Outer;
+                        System.out.println(i + "*" + j + "=" + i * j);
+                }
+        } */
+
+/*         Scanner stdin = new Scanner(System.in);
+        int i;
+        double sum = 0.0, avg;
+        double dnum[] = new double[5];
+        System.out.println("dnum 배열의 길이 : " + dnum.length);
+        System.out.println("초기화 하지 않은 dnum[]의 값: ");
+        for (i = 0; i < dnum.length; i++)
+                System.out.println(dnum[i]+" ");
+        System.out.println();
+
+        for (i = 0; i < dnum.length; i++) {
+                System.out.println("dnum["+i+"] 번째 데이터 입력 : ");
+                dnum[i] = stdin.nextDouble();
+        }
+        for (i = 0; i < dnum.length; i++)
+                sum = sum + dnum[i];
+        System.out.println("배열의 합은 " + sum + "입니다");
+        avg = sum/dnum.length;
+        System.out.println("배열 값의 평균은 " + avg + "입니다"); */
+
+/*         int[] score = {88, 97, 53, 62, 92, 68, 82};
+        int max = score[0];
+        for (int i : score) {
+                if (i > max)
+                        max = i;
+        }
+        System.out.println("배열 요소의 최대값은 " + max + "입니다"); */
+
+/*         int[] num1 = {10, 20, 30};
+        int[] num2 = {40, 50, 60};
+        num2 = num1;
+        num2[2] = 200;
+        System.out.println("num1 배열의 값 : ");
+        for (int i : num1)
+                System.out.println(i + " ");
+        System.out.println("\nnum2 배열의 값 : ");
+        for (int i : num2)
+                System.out.println(i + " ");
+        int num3[] = {100, 200, 300};
+        int num4[] = {400, 500, 600};
+        for (int i = 0; i < num3.length; i++)
+                num4[i] = num3[i];
+        num4[2] = 999;
+        System.out.println("\nnum3 배열의 값 : ");
+        for (int i : num3)
+                System.out.println(i + " ");
+        System.out.println("\nnum4 배열의 값 : ");
+        for (int i : num4)
+                System.out.println(i + " "); */
+
+/*         int[][] twoD = new int[4][];
+        twoD[0] = new int[1];
+        twoD[1] = new int[2];
+        twoD[2] = new int[3];
+        twoD[3] = new int[4];
+        System.out.println("2차원 배열에서 행의 길이는 : " + twoD.length);
+        System.out.println("첫 번째 행의 요소 수는 : " + twoD[0].length);
+        System.out.println("두 번째 행의 요소 수는 : " + twoD[1].length);
+        System.out.println("세 번째 행의 요소 수는 : " + twoD[2].length);
+        System.out.println("네 번째 행의 요소 수는 : " + twoD[3].length);
+        int i, j, k = 0;
+        for (i = 0; i < twoD.length; i++)
+                for (j = 0; j < twoD[i].length; j++) {
+                        twoD[i][j] = k;
+                        k++;
+                }
+        for (i = 0; i < twoD.length; i++) {
+                for (int val: twoD[i])
+                        System.out.println(val + " ");
+                System.out.println();
+        } */
+
+/*         int[] int1 = {9, 1, 7, 3, 5, 4, 6, 2, 8, 0};
+        System.out.println("초기배열 : " + Arrays.toString(int1));
+        Arrays.fill(int1, 3, 5,33);
+        System.out.println("fill() 수행 후 : " + Arrays.toString(int1));
+        Arrays.sort(int1);
+        System.out.println("33은 배열의" + Arrays.binarySearch(int1, 33) + "번째 요소");
+        int[] int2 = {5, 4, 3, 2, 1};
+        System.out.println("두 번째 배열 : " + Arrays.toString(int2));
+        System.out.println("두 개의 배열이 같은가?" + Arrays.equals(int1, int2));
+        int[] int3 = new int[5];
+        System.arraycopy(int2, 0, int3, 0, 5);
+        System.out.println("복사된 배열 : " + Arrays.toString(int3)); */
+
+/*         String[] array1 = {"IMF", "제주도", "자바도사", "한글나라", "Computer", "모카", "JAVA", "인터넷탐색", "초롱초롱", "come", "바람", "스크립터", "군고구마", "도서", "their", "country"};
+        System.out.println("===== 정렬 전 데이터 =====");
+        System.out.println(Arrays.toString(array1));
+        Arrays.sort(array1);
+        System.out.println("===== 정렬 후 데이터 =====");
+        System.out.println(Arrays.toString(array1));
+        System.out.println("군고구마는 배열의 " + Arrays.binarySearch(array1, "군고구마") + "번째 요소");
+        String[] array2 = array1;
+        System.out.println("array1과 array2가 같은가? : " + Arrays.equals(array1, array2));
+        String[] array3 = new String[20];
+        System.arraycopy(array2, 0, array3, 0, array2.length);
+        System.out.println("array3 배열 : " + Arrays.toString(array3)); */
+
+/*         class Box1 {
+                int width;
+                int height;
+                int depth;
+        }
+
+        Box1 mybox1 = new Box1();
+        Box1 mybox2 = new Box1();
+        int vol1, vol2;
+
+        mybox1.width = 78;
+        mybox1.height = 145;
+        mybox1.depth = 87;
+
+        mybox2.width = 48;
+        mybox2.height = 45;
+        mybox2.depth = 137;
+
+        vol1 = mybox1.width * mybox1.height * mybox1.depth;
+        System.out.println("첫 번째 박스의 부피는 " + vol1 + "입니다");
+
+        vol2 = mybox2.width * mybox2.height * mybox2.depth;
+        System.out.println("두 번째 박스의 부피는 " + vol2 + "입니다"); */
+
+/*         class Box2 {
+                int width = 10;
+                int height = 20;
+                int depth = 30;
+        }
+
+        int myint1 = 100;
+        int myint2 = myint1;
+        System.out.println("첫 번째 값 : " + myint1 + "두 번째 값 :" + myint2);
+        myint1 = 200;
+        System.out.println("첫 번째 값 : " + myint1 + "두 번째 값 : " + myint2);
+        Box2 mybox1 = new Box2();
+        Box2 mybox2 = new Box2();
+        mybox1.width = 20;
+        mybox2.depth = 123;
+        System.out.println("mybox1.width : " + mybox1.width);
+        System.out.println("mybox1.height : " + mybox1.height);
+        System.out.println("mybox1.depth : " + mybox1.depth);
+
+        System.out.println("mybox2.width : " + mybox2.width);
+        System.out.println("mybox2.height : " + mybox2.height);
+        System.out.println("mybox2.depth : " + mybox2.depth);
+
+        Box2 mybox3 = mybox2;
+        mybox2.width = 1000;
+        mybox2.height = 2000;
+        System.out.println("mybox3.width : " + mybox3.width);
+        System.out.println("mybox3.height : " + mybox3.height);
+        System.out.println("mybox3.depth : " + mybox3.depth); */
+
+/*         class Initial {
+                int number;
+                double rate;
+                String name;
+                int[] score;
+                public void aMethod() {
+                        int count;
+                        System.out.println(number);
+                }
+        }
+
+        int var1;
+        double var2;
+        Initial ob1 = new Initial();
+        System.out.println("객체 변수 number의 값은 : " + ob1.number);
+        System.out.println("객체 변수 rate의 값은 : " + ob1.rate);
+        System.out.println("객체 변수 name 값은 : " + ob1.name);
+        System.out.println("객체 변수 score 값은 : " + ob1.score);
+        ob1.aMethod(); */
+
+        class Box3 {
+            int width;
+            int height;
+            int depth;
+            long idNum;
+            static long boxID = 0;
+            public Box3() {
+                    idNum = ++boxID;
+            }
+    }
+
+    Box3 mybox1 = new Box3();
+    Box3 mybox2 = new Box3();
+    Box3 mybox3 = new Box3();
+    Box3 mybox4 = new Box3();
+
+    System.out.println("mybox1의 id 번호 : " + mybox1.idNum);
+    System.out.println("mybox2의 id 번호 : " + mybox2.idNum);
+    System.out.println("mybox3의 id 번호 : " + mybox3.idNum);
+    System.out.println("mybox4의 id 번호 : " + mybox4.idNum);
+    System.out.println("마지막 생성된 박스 번호는 " + Box3.boxID + "번 입니다.");
+    }
+}
+
