@@ -548,7 +548,7 @@ public class Study {
         System.out.println("객체 변수 score 값은 : " + ob1.score);
         ob1.aMethod(); */
 
-        class Box3 {
+/*         class Box3 {
             int width;
             int height;
             int depth;
@@ -568,7 +568,276 @@ public class Study {
     System.out.println("mybox2의 id 번호 : " + mybox2.idNum);
     System.out.println("mybox3의 id 번호 : " + mybox3.idNum);
     System.out.println("mybox4의 id 번호 : " + mybox4.idNum);
-    System.out.println("마지막 생성된 박스 번호는 " + Box3.boxID + "번 입니다.");
+    System.out.println("마지막 생성된 박스 번호는 " + Box3.boxID + "번 입니다."); */
+
+/*     class Box4 {
+        int width;
+        int height;
+        int depth;
+        public Box4(int w, int h, int d) {
+                width = w;
+                height = h;
+                depth = d;
+        }
+    }
+
+    Box4 mybox1 = new Box4(10, 20, 30);
+    // Box4 mybox2 = new Box4();
+    int vol = mybox1.width * mybox1.height * mybox1.depth;
+    System.out.println("박스의 부피 : " + vol); */
+
+/*     class Box5 {
+        int width;
+        int height;
+        int depth;
+        public Box5() {
+                width = 1;
+                height = 1;
+                depth = 1;
+        }
+        public Box5(int w) {
+                width = w;
+                height = 1;
+                depth = 1;
+        }
+        public Box5(int w, int h) {
+                width = w;
+                height = h;
+                depth = 1;
+        }
+        public Box5(int w, int h, int d) {
+                width = w;
+                height = h;
+                depth = d;
+        }
+        } */
+/*        class Box7 {
+                int width;
+                int height;
+                int depth;
+                public Box7() {
+                        this(1, 1, 1);
+                        System.out.println("매개 변수 없는 생성자 수행");
+                }
+                public Box7(int width) {
+                        this(width, 1, 1);
+                        System.out.println("매개 변수(1개) 생성자 수행");
+                }
+                public Box7(int width, int height) {
+                        this(width, height, 1);
+                        System.out.println("매개 변수(2개) 생성자 수행");
+                }
+                public Box7(int width, int height, int depth) {
+                        System.out.println("매개 변수(3개) 생성자 수행");
+                        this.width = width;
+                        this.height = height;
+                        this.depth = depth;
+                }
+       } */
+
+/*        class Box10 {
+                private int width;
+                private int height;
+                private int depth;
+                private int vol;
+                private long idNum;
+                private static long boxId;
+                public Box10(int width, int height, int depth) {
+                        this.width = width;
+                        this.height = height;
+                        this.depth = depth;
+                        idNum = ++boxId;
+                        volume();
+                }
+                private void volume() {
+                        vol = width * height * depth;
+                }
+                public String getVolume() {
+                        return idNum + "번 박스의 부피 : " + vol;
+                }
+                public static long getCurrentId() {
+                        // return idNum;
+                        return boxId;
+                }
+       }
+       Box10 mybox1;
+       for (int i = 1; i <= 5; i++) {
+                mybox1 = new Box10(i, i +1, i+2);
+                System.out.println(mybox1.getVolume());
+       }
+       System.out.println("마지막 생성된 박스 번호는 " + Box10.getCurrentId() + "번입니다."); */
+       // System.out.println(Box10.boxId);
+       // 여기에서는 같은 클래스 내에 있기 때문에 잘 실행이 되지만, 외부 클래스에선 static에 접근이 불가능하다.
+       // 클래스 내부에(혹은 메서드) 새로운 클래스를 생성하고 그 내부에 private을 생성하는 것은 의미가 없다.
+       // 내부에 private으로 생성해도 같은 클래스(외부가 아닌) 혹은 메서드 내에 있다면 아무리 다른 클래스에서 접근을 하더라도, 결국엔 같은 곳에 있는 판정이기 때문이다.
+
+/*         class Box11 {
+        private int ivol;
+        private double dvol;
+        public Box11(int w, int h, int d) {
+                volume(w, h, d);
+        }
+        public Box11(double w, double h, double d) {
+                volume(w, h, d);
+        }
+        private void volume(int w, int h, int d) {
+                ivol = w * h * d;
+        }
+        private void volume(double w, double h, double d) {
+                dvol = w * h * d;
+        }
+        public int get_ivol() {
+                return ivol;
+        }
+        public double get_dvol() {
+                return dvol;
+        }
+       }
+       Box11 mybox1 = new Box11(10, 20, 30);
+       System.out.println("박스의 부피(정수 매개 변수) : " + mybox1.get_ivol());
+       
+       mybox1 = new Box11(10.5, 20.5, 30.5);
+       System.out.println("박스의 부피(실수 매개 변수) : " + mybox1.get_dvol());
+
+       mybox1 = new Box11(10, 20 , 30.5);
+       System.out.println("박스의 부피(정수와 실수 혼합): " + mybox1.get_dvol()); */
+
+/*        class Ramyon {
+        String ramyon = "라면";
+        String water = "물";
+        String onion = "파";
+        void boilWater() {
+                System.out.println(water + "를 끓인다.");
+        }
+        void cooking() {
+                System.out.println(ramyon + "과 " + onion + "을 넣고 끓여 요리완성. 맛있게 드세요!!!");
+        }
+       }
+
+       class RiceRamyon extends Ramyon {
+        String topp = "떡";
+        void topping() {
+                System.out.println(topp + "을 넣는다.");
+        }
+
+       }
+       class CheeseRamyon extends Ramyon {
+        String topp = "치즈";
+        void topping() {
+                System.out.println(topp + "을 넣는다.");
+         }
+        }
+        int s;
+        do {
+                System.out.println("만들고 싶은 요리를 입력하세요(1: 일반라면, 2:떡라면, 3:치즈라면, 99:종료");
+                Scanner stdin = new Scanner(System.in);
+                s = stdin.nextInt();
+                if (s == 1) {
+                        Ramyon r = new Ramyon();
+                        r.boilWater();
+                        r.cooking();
+                } else if (s == 2) {
+                        RiceRamyon rr = new RiceRamyon();
+                        rr.boilWater();
+                        rr.topping();
+                        rr.cooking();
+                } else if (s == 3) {
+                        CheeseRamyon cr = new CheeseRamyon();
+                        cr.boilWater();
+                        cr.topping();
+                        cr.cooking();
+                } 
+        } while (s != 99);
+        System.out.println("감사합니다."); */
+
+/*         class B1 {
+                public int x = 500;
+                public int y = 1000;
+        }
+        class B2 extends B1 {
+                public String x = "처음 시작하는 자바";
+        }
+        B2 b2 = new B2();
+        System.out.println("객체 b2에 들어 있는 x, y 값 : " + b2.x + b2.y);
+        B1 b1 = new B1();
+        System.out.println("객체 b1에 들어 있는 x, y 값 : " + b1.x + b1.y); */
+
+/*         class DA1 {
+                public double d1;
+                public DA1() {
+                        System.out.println("클래스 DA1의 묵시적 생성자 수행");
+                        d1 = 10 * 10;
+                }
+        }
+        
+        class DA2 extends DA1 {
+                public double d2;
+                public DA2() {
+                        System.out.println("클래스 DA2의 묵시적 생성자 수행");
+                        d2 = 10 * 10 * 10;
+                }
+        }
+        class DA3 extends DA2 {
+                public double d3;
+                public DA3() {
+                        System.out.println("클래스 DA3의 묵시적 생성자 수행");
+                        d3 = 10 * 10 * 10;
+                }
+        }
+        DA3 super1 = new DA3();
+        System.out.println("10의 2제곱 : " + super1.d1);
+        System.out.println("10의 3제곱 : " + super1.d2);
+        System.out.println("10의 4제곱 : " + super1.d3);
+        DA2 super2 = new DA2(); */
+
+/*         class DB1 {
+                public double d1;
+                public DB1() {
+                        System.out.println("클래스 DB1의 묵시적 생성자 수행");
+                        d1 = 10 * 10;
+                }
+        }
+        class DB2 extends DB1 {
+                public double d2;
+                public DB2() {
+                        System.out.println("클래스 DB2의 묵시적 생성자 수행");
+                        d2 = 10 * 10 * 10;
+                }
+                public DB2(double d) {
+                        System.out.println("클래스 DB2의 명시적 생성자 수행");
+                        d2 = d * d * d;
+                }
+        }
+        class DB3 extends DB2 {
+                public double d3;
+                public DB3() {
+                        System.out.println("클래스 DB3의 묵시적 생성자 수행");
+                        d3 = 10 * 10 * 10* 10;
+                }
+                public DB3(double d) {
+                        System.out.println("클래스 DB3의 명시적(매개 변수 1개) 생성자 수행");
+                        d3 = d * d * d * d;
+                }
+        }
+        DB3 super1 = new DB3(11);
+        System.out.println("10의 2제곱 : " + super1.d1);
+        System.out.println("10의 3제곱 : " + super1.d2);
+        System.out.println("10의 4제곱 : " + super1.d3); */
+
+        class OIa {
+                public void show(String str) {
+                        System.out.println("상위 클래스의 메소드 show(String str) 수행 " + str);
+                }
+        }
+
+        class OIb extends OIa {
+                public void show() {
+                        System.out.println("하위 클래스의 메소드 show() 수행");
+                }
+        }
+        OIb oib = new OIb();
+        oib.show("처음 시작하는 자바");
+        oib.show();
     }
 }
 
