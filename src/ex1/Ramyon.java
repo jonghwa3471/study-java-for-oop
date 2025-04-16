@@ -8,13 +8,19 @@ package ex1;
         System.out.println(water + "을 끓인다.");
     }
     void cooking() {
-        System.out.println(ramyon + "과" + onion + "을 넣고 끓여 요리 완성. 맛있게 드세요!!!");
+        System.out.println(ramyon + "과 " + onion + "를 넣고 끓여 요리 완성. 맛있게 드세요!!!");
     }
 }
 
-class RiceRamyon extends Ramyon{
-    String topp = "떡";
+class ToppingRamyon extends Ramyon {
+    String topp;
+    ToppingRamyon(String topp) {
+        this.topp = topp;
+    }
     void topping() {
-        System.out.println(topp + "을 넣는다");
+        System.out.println(topp + "을 넣는다.");
     }
 }
+
+
+
