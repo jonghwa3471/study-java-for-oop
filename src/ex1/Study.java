@@ -1,6 +1,7 @@
 package ex1;
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Random;
 
 public class Study {
     public void examples() {
@@ -824,7 +825,7 @@ public class Study {
         System.out.println("10의 3제곱 : " + super1.d2);
         System.out.println("10의 4제곱 : " + super1.d3); */
 
-        class OIa {
+/*         class OIa {
                 public void show(String str) {
                         System.out.println("상위 클래스의 메소드 show(String str) 수행 " + str);
                 }
@@ -837,7 +838,367 @@ public class Study {
         }
         OIb oib = new OIb();
         oib.show("처음 시작하는 자바");
-        oib.show();
+        oib.show(); */
+
+/*         class SB1 {
+                public int x = 500;
+                public int y = 1000;
+        }
+        class SB2 extends SB1 {
+                public String x = "처음 시작하는 자바";
+                public String xx = x + super.x;
+                public String yy = "" + y + super.y;
+        }
+        SB2 sb2 = new SB2();
+        System.out.println("객체 sb2에 들어 있는 x, y값: " + sb2.x + sb2.y);
+        // sb2.super.x 이와 같은 사용은 허용 안 됨.
+        System.out.println("객체 sb2에 들어있는 xx 값 : " + sb2.xx);
+        System.out.println("객체 sb2에 들어있는 yy 값 : " + sb2.yy); */
+
+/*         class D1 {
+                public int x = 1000;
+                public void display() {
+                        System.out.println("상위 클래스 D1의 display() 메소드입니다");
+                }
+        }
+        class D2 extends D1 {
+                public int x = 2000;
+                public void display() {
+                        System.out.println("하위 클래스 D2의 display() 메소드입니다");
+                }
+                public void write() {
+                        display();
+                        super.display();
+                        System.out.println("D2 클래스 객체의 x 값은 : " + x);
+                        System.out.println("D1 클래스 객체의 x 값은 : " + super.x);
+                }
+        }
+        D2 d = new D2();
+        d.write(); */
+
+/*         class SD1 {
+                public int i1;
+                public double d1;
+                public SD1(int i1) {
+                        System.out.println("SD1(int i1) 생성자 수행");
+                        this.i1 = i1 * i1;
+                        System.out.println(i1 + "의 2제곱은 : " + this.i1);
+                }
+                public SD1 (double d1) {
+                        System.out.println("SD1(double d1) 생성자 수행");
+                        this.d1 = d1 * d1;
+                        System.out.println(d1 + "의 2제곱은 : " + this.d1);
+                }
+        }
+
+        class Sub1 extends SD1 {
+                public Sub1(int i1) {
+                        super(i1);
+                        System.out.println("Sub1(int i1) 생성자 수행");
+                        this.i1 = this.i1 * i1;
+                        System.out.println(i1 + "의 3제곱은 : " + this.i1);
+                }
+                public Sub1(double d1) {
+                        super(d1);
+                        System.out.println("Sub1(double d1) 생성자 수행");
+                        this.d1 = this.d1 * d1;
+                        System.out.println(d1 + "의 3제곱은 : " + this.d1);
+                }
+        }
+        Sub1 sub1 = new Sub1(10);
+        Sub1 sub2 = new Sub1(10.5); */
+
+/*         class Engine {
+                String capacity;
+                String fuel;
+                private int price = 20000000;
+                public Engine(int cc, int fuel) {
+                        if (cc == 1) {
+                                capacity = "2000cc이하";
+                                price += 0;
+                        } else {
+                                capacity = "2000cc이상";
+                                price += 10000000;
+                        }
+                        if (fuel == 1) {
+                                this.fuel = "가솔린";
+                                price += 5000000;
+                        } else this.fuel = "디젤";
+                }
+                public int getPrice() {
+                        return price;
+                }
+        }
+        class Car {
+                String color;
+                Engine e;
+                public Car(String c, int cc, int fuel) {
+                        color = c;
+                        e = new Engine(cc, fuel);
+                }
+                public String getPrice() {
+                        return "당신이 요청한 " + e.capacity + "의"  + e.fuel + "차량(컬러: "+ color + ")의 가격은 : " + e.getPrice();
+                }
+        }
+        String color;
+        int cc, fuel;
+        System.out.println("구입하고 싶은 차의 배기량은 (1: 2000cc 이하, 2: 2000cc 이상): ");
+        Scanner stdin = new Scanner(System.in);
+        cc = stdin.nextInt();
+        System.out.println("구입하고 싶은 차의 연료는 (1: 가솔린, 2: 디젤): ");
+        stdin = new Scanner(System.in);
+        fuel = stdin.nextInt();
+        System.out.println("구입하고 싶은 차의 컬러는 : ");
+        stdin = new Scanner(System.in);
+        color = stdin.next();
+        Car c = new Car(color, cc, fuel);
+        System.out.println(c.getPrice());
+        System.out.println("차량의 가격은: " + c.e.getPrice()); */
+
+/*         class Rectangle4 {
+                public int width;
+                public int height;
+                public Rectangle4(int w, int h) {
+                        this.width = w;
+                        this.height = h;
+                }
+                public int computerRectangleArea() {
+                        return width * height;
+                }
+        }
+        class Cube4 extends Rectangle4 {
+                public int depth;
+                public Cube4(int w, int h, int d) {
+                        super(w, h);
+                        this.depth = d;
+                }
+                public int computerCubeArea() {
+                        return super.computerRectangleArea() * depth;
+                }
+        }
+        Rectangle4 r = new Cube4(10, 20, 30);
+        System.out.println("넓이는 : " + r.computerRectangleArea()); */
+        // System.out.println("넓이는 : " + r.computerCubeArea());
+        // Cube4 c = new Rectangle4(10, 20);
+
+/*         class Rectangle {
+                public int width;
+                public int height;
+                public Rectangle(int w, int h) {
+                        this.width = w;
+                        this.height = h;
+                }
+                public int computerRectangleArea() {
+                        return width * height;
+                }
+        }
+        class Cube extends Rectangle {
+                public int depth;
+                public Cube(int w, int h, int d) {
+                        super(w, h);
+                        depth = d;
+                }
+                public int computerCubeAre() {
+                        return super.computerRectangleArea() * depth;
+                }
+        }
+        Rectangle r = new Rectangle(10, 20);
+        Cube c = new Cube(10, 20, 30);
+        System.out.println("r이 Rectangle의 객체? : " + (r instanceof Rectangle)); // true
+        System.out.println("r이 Cube의 객체? : " + (r instanceof Cube)); // false
+        System.out.println("c가 Cube의 객체 ? : " + (c instanceof Cube)); // true
+        System.out.println("==========형 변환 이후==========");
+        r = new Cube(20, 30, 40);
+        System.out.println("형 변환 r이 Rectangle의 객체? :" + (r instanceof Rectangle)); // true
+        System.out.println("형 변환 r이 Cube의 객체? : " + (r instanceof Cube)); // true
+        System.out.println("형 변환 c가 Rectangle의 객체? : " + (c instanceof Rectangle)); // true
+        System.out.println("형 변환 c가 Cube의 객체? : " + (c instanceof Cube)); // true
+        System.out.println("============================");
+        System.out.println("c가 Object의 객체? : " + (c instanceof Object)); // ture */
+
+/*         class Am {
+                int count = 1;
+                void callme() {
+                        System.out.println("Am의 callme() 실행, count 값 : " + count);
+                }
+        }
+        class Bm extends Am {
+                int count = 2;
+                void callme() {
+                        System.out.println("Bm의 callme() 실행, count 값 : " + count);
+                }
+        }
+        class Cm extends Am {
+                int count = 3;
+                void callme() {
+                        System.out.println("Cm의 callme() 실행, count 값 : " + count);
+                }
+        }
+        Am r = new Am();
+        r.callme();
+        System.out.println("r.count 값 : " + r.count);
+
+        r = new Bm();
+        r.callme();
+        System.out.println("r.count 값 : " + r.count);
+
+        r = new Cm();
+        r.callme();
+        System.out.println("r.count 값 : " + r.count); */
+
+/*         abstract class Shape {
+                abstract void draw();
+                abstract void computerArea(double a, double b);
+        }
+        class Rectangle1 extends Shape {
+                void draw() {
+                        System.out.println("사각형을 그리는 기능");
+                }
+                void computerArea(double h, double v) {
+                        System.out.println("사각형의 넓이 : " + (h * v));
+                }
+        }
+        class Triangle1 extends Shape {
+                void draw() {
+                        System.out.println("삼각형을 그리는 기능");
+                }
+                void computerArea(double a, double h) {
+                        System.out.println("삼각형의 넓이 : " + (a * h / 2));
+                }
+        }
+        System.out.println("추상 메서드를 이용한 다형성 ==");
+        Shape s = new Rectangle1();
+        s.draw();
+        s.computerArea(5.0, 10.0);
+        s = new Triangle1();
+        s.draw();
+        s.computerArea(5.0, 10.0); */
+
+/*         abstract class Figure {
+                abstract void draw();
+        }
+        class Triangle2 extends Figure {
+                public void draw() {
+                        System.out.println("다형성 : 삼각형을 그린다");
+                }
+        }
+        class Rectangle2 extends Figure {
+                public void draw() {
+                        System.out.println("다형성 : 사각형을 그린다");
+                }
+        }
+        class Oval2 extends Figure {
+                public void draw() {
+                        System.out.println("다형성 : 타원형을 그린다");
+                }
+        }
+        class Polydraw {
+                public void pdraw(Figure f) {
+                        f.draw();
+                }
+                public void pdraw(Triangle2 t) {
+                        t.draw();
+                }
+                public void pdraw(Rectangle2 r) {
+                        r.draw();
+                }
+                public void pdraw(Oval2 o) {
+                        o.draw();
+                }
+        }
+        Polydraw p = new Polydraw();
+        Figure fg1 = new Triangle2();
+        Figure fg2 = new Rectangle2();
+        Figure fg3 = new Oval2();
+        p.pdraw(fg1);
+        p.pdraw(fg2);
+        p.pdraw(fg3); */
+
+/*         interface IStack {
+                public void push(int item);
+                public int pop();
+        }
+        class FixedStack implements IStack {
+                private int[] stack;
+                private int tos;
+                FixedStack(int size) {
+                        stack = new int[size];
+                        tos = -1;
+                }
+                public void push(int item) {
+                        if (tos == stack.length - 1)
+                                System.out.println("스택이 꽉 찼음");
+                        else
+                                stack[++tos] = item;
+                }
+                public int pop() {
+                        if (tos < 0) {
+                                System.out.println("스택이 비었음");
+                                return 0;
+                        }  else    
+                                return stack[tos--];
+                }
+        }
+        Random r = new Random();
+        FixedStack mystack1 = new FixedStack(10);
+        for (int i = 0; i < 10; i++) {
+                mystack1.push(r.nextInt(10));
+        }
+        System.out.println("스택 : mystack1");
+        for (int i = 0; i < 10; i++) {
+                System.out.println(mystack1.pop() + "");
+        } */
+       abstract class Figure1 {
+        abstract void draw();
+       }
+       interface Shape1 {
+        public void computerArea(double a, double b);
+       }
+       class Triangle3 extends Figure1 implements Shape1 {
+        void draw() {
+                System.out.println("삼각형을 그리는 기능");
+        }
+        public void computerArea(double a, double h) {
+                System.out.println("삼각형의 넓이 : " + (a * h / 2));
+        }
+       }
+       class Rectangle3 extends Figure1 implements Shape1 {
+        void draw() {
+                System.out.println("사각형을 그리는 기능");
+        }
+        public void computerArea(double h, double v) {
+                System.out.println("사각형의 넓이 : " + (h * v));
+        }
+       }
+       class Oval3 extends Figure1 implements Shape1 {
+        void draw() {
+                System.out.println("원을 그리는 기능");
+        }
+        public void computerArea(double r1, double r2) {
+                System.out.println("원의 넓이 : " + (3.14 * r1 * r2));
+        }
+       }
+       class Polydraw1 {
+        public void pdraw(Figure1 f) {
+                f.draw();
+        }
+        public void pcomputerArea(Shape1 s, double a, double b) {
+                s.computerArea(a, b);
+        }
+       }
+       Polydraw1 p = new Polydraw1();
+       Figure1 fg1 = new Triangle3();
+       Figure1 fg2 = new Rectangle3();
+       Figure1 fg3 = new Oval3();
+       Shape1 sp1 = new Triangle3();
+       Shape1 sp2 = new Rectangle3();
+       Shape1 sp3 = new Oval3();
+       p.pdraw(fg1);
+       p.pcomputerArea(sp1, 4, 4);
+       p.pdraw(fg2);
+       p.pcomputerArea(sp2, 4, 4);
+       p.pdraw(fg3);
+       p.pcomputerArea(sp3, 4, 4);
     }
 }
 
