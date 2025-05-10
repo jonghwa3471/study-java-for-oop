@@ -1148,7 +1148,7 @@ public class Study {
         for (int i = 0; i < 10; i++) {
                 System.out.println(mystack1.pop() + "");
         } */
-       abstract class Figure1 {
+/*        abstract class Figure1 {
         abstract void draw();
        }
        interface Shape1 {
@@ -1198,7 +1198,7 @@ public class Study {
        p.pdraw(fg2);
        p.pcomputerArea(sp2, 4, 4);
        p.pdraw(fg3);
-       p.pcomputerArea(sp3, 4, 4);
+       p.pcomputerArea(sp3, 4, 4); */
     }
 }
 
